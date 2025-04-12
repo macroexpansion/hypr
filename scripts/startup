@@ -24,10 +24,10 @@ fi
 ~/.config/hypr/scripts/gtkthemes &
 
 # Lauch notification daemon (mako)
-~/.config/hypr/scripts/notifications &
+# ~/.config/hypr/scripts/notifications &
 
 # Lauch statusbar (waybar)
-~/.config/hypr/scripts/statusbar &
+# ~/.config/hypr/scripts/statusbar &
 
 # Start network manager applet
 nm-applet --indicator &

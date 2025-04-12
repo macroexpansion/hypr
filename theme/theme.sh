@@ -284,11 +284,11 @@ fi
 
 ## Execute Script ---------------------------
 apply_wallpaper
-apply_alacritty
+# apply_alacritty
 apply_foot
-apply_mako
+# apply_mako
 apply_rofi
-apply_waybar
+# apply_waybar
 apply_wlogout
 apply_wofi
 apply_hypr
