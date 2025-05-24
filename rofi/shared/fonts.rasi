@@ -3,5 +3,6 @@
 /* Text Font */
 
 * {
-    font: "Iosevka Nerd Font 10";
+    // font: "Iosevka Nerd Font 10";
+    font: "CaskaydiaCove Nerd Font 12";
 }

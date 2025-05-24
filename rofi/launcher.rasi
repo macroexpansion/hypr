@@ -1,7 +1,3 @@
-/**
- * Copyright (C) 2020-2024 Aditya Shakya <adi1090x@gmail.com>
- **/
-
 /*****----- Configuration -----*****/
 configuration {
 	modi:                       "drun,run,filebrowser";
@@ -20,11 +16,11 @@ configuration {
 window {
     /* properties for window widget */
     transparency:                "real";
-    location:                    west;
-    anchor:                      west;
+    location:                    center;
+    anchor:                      center;
     fullscreen:                  false;
-    width:                       500px;
-    height:                      96%;
+    width:                       55%;
+    height:                      55%;
     x-offset:                    20px;
     y-offset:                    0px;
 
