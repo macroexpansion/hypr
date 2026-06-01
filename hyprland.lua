@@ -157,14 +157,23 @@ hl.window_rule({
 	match = { class = "brave-browser|google-chrome" },
 	opacity = "1.0 1.0",
 })
+-- hl.window_rule({
+-- 	name = "opaque-steam-apps",
+-- 	match = { class = "^(steam_app_.*)$" },
+-- 	opacity = "1.0 1.0",
+-- })
+-- hl.window_rule({
+-- 	name = "opaque-dota2",
+-- 	match = { class = "^(dota2.*)$" },
+-- 	opacity = "1.0 1.0",
+-- })
 hl.window_rule({
-	name = "opaque-steam-apps",
-	match = { class = "^(steam_app_.*)$" },
-	opacity = "1.0 1.0",
-})
-hl.window_rule({
-	name = "opaque-dota2",
-	match = { class = "^(dota2.*)$" },
+	name = "centered-steam-games",
+	match = { class = "^(steam_app_.*|dota2.*|Clair.*)$" },
+	float = true,
+	center = true,
+	size = "75% 75%",
+	suppress_event = "fullscreen",
 	opacity = "1.0 1.0",
 })
 
@@ -228,6 +237,10 @@ hl.bind("SUPER + Print", hl.dsp.exec_cmd(screenshot .. " --area"))
 hl.bind("SUPER + Q", hl.dsp.window.close())
 hl.bind("CTRL + ALT + Delete", hl.dsp.exit())
 hl.bind("SUPER + F", hl.dsp.window.fullscreen())
+hl.bind("SUPER + Space", function()
+	hl.dispatch(hl.dsp.window.float({ action = "toggle" }))
+	hl.dispatch(hl.dsp.window.center())
+end)
 
 -- Move focus
 hl.bind("SUPER + H", hl.dsp.focus({ direction = "left" }))
