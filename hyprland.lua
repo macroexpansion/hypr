@@ -155,18 +155,8 @@ hl.config({
 hl.window_rule({
 	name = "opaque-browsers",
 	match = { class = "brave-browser|google-chrome" },
-	opacity = "1.0 1.0",
+	opacity = "1.0 override 1.0 override",
 })
--- hl.window_rule({
--- 	name = "opaque-steam-apps",
--- 	match = { class = "^(steam_app_.*)$" },
--- 	opacity = "1.0 1.0",
--- })
--- hl.window_rule({
--- 	name = "opaque-dota2",
--- 	match = { class = "^(dota2.*)$" },
--- 	opacity = "1.0 1.0",
--- })
 hl.window_rule({
 	name = "centered-steam-games",
 	match = { class = "^(steam_app_.*|dota2.*|Clair.*)$" },
@@ -174,7 +164,7 @@ hl.window_rule({
 	center = true,
 	size = "75% 75%",
 	suppress_event = "fullscreen",
-	opacity = "1.0 1.0",
+	opacity = "1.0 override 1.0 override",
 })
 
 --------------------------------------------------------------------------------
