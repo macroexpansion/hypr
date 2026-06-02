@@ -159,10 +159,10 @@ hl.window_rule({
 })
 hl.window_rule({
 	name = "centered-steam-games",
-	match = { class = "^(steam_app_.*|dota2.*|Clair.*)$" },
+	match = { class = "^(steam_app_.*|dota2.*)$" },
 	float = true,
 	center = true,
-	size = "75% 75%",
+	size = "75% override 75% override",
 	suppress_event = "fullscreen",
 	opacity = "1.0 override 1.0 override",
 })
