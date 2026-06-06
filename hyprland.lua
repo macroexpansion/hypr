@@ -82,6 +82,7 @@ hl.config({
 		sensitivity = 1.0,
 		accel_profile = "adaptive",
 		scroll_method = "2fg",
+		follow_mouse = 0,
 	},
 
 	group = {
