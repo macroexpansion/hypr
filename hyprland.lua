@@ -24,7 +24,7 @@ hl.env("NVD_BACKEND", "direct")
 -- Monitors
 --------------------------------------------------------------------------------
 
-hl.monitor({ output = "", mode = "highres", position = "auto", scale = 1.33 })
+hl.monitor({ output = "", mode = "highres", position = "auto", scale = 2.0 })
 
 --------------------------------------------------------------------------------
 -- Config (non-default values only)
