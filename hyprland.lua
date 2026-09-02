@@ -159,6 +159,11 @@ hl.window_rule({
 	opacity = "1.0 override 1.0 override",
 })
 hl.window_rule({
+	name = "davinci-resolve",
+	match = { class = "davinci-resolve" },
+	opacity = "1.0 override 1.0 override",
+})
+hl.window_rule({
 	name = "centered-steam-games",
 	match = { class = "^(steam_app_.*|dota2.*)$" },
 	float = true,
