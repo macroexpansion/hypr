@@ -59,10 +59,12 @@ hl.config({
 		inactive_opacity = 0.73,
 
 		blur = {
-			size = 5,
+			size = 8,
 			passes = 2,
 			brightness = 0.8172,
 			popups = true,
+			ignore_opacity = true,
+			xray = false,
 		},
 
 		shadow = {
@@ -163,13 +165,27 @@ hl.window_rule({
 	match = { class = "davinci-resolve" },
 	opacity = "1.0 override 1.0 override",
 })
+-- hl.window_rule({
+-- 	name = "centered-steam-games",
+-- 	match = { class = "^(steam_app_.*|dota2.*)$" },
+-- 	float = true,
+-- 	center = true,
+-- 	-- size = "75% override 75% override",
+-- 	-- suppress_event = "fullscreen",
+-- 	opacity = "1.0 override 1.0 override",
+-- })
 hl.window_rule({
-	name = "centered-steam-games",
-	match = { class = "^(steam_app_.*|dota2.*)$" },
-	float = true,
-	center = true,
-	size = "75% override 75% override",
-	suppress_event = "fullscreen",
+	name = "centered-dota2",
+	match = { class = "dota2" },
+	-- float = true,
+	-- center = true,
+	-- size = "75% override 75% override",
+	-- suppress_event = "fullscreen",
+	opacity = "1.0 override 1.0 override",
+})
+hl.window_rule({
+	name = "opaque-ghostty",
+	match = { class = "com.mitchellh.ghostty" },
 	opacity = "1.0 override 1.0 override",
 })
 
@@ -185,7 +201,7 @@ local editor = "geany"
 local browser = "firefox"
 local colorpicker = scripts .. "/colorpicker"
 local screenshot = scripts .. "/screenshot"
-local lockscreen = scripts .. "/lockscreen"
+-- local lockscreen = scripts .. "/lockscreen"
 
 local rofi_launcher = scripts .. "/rofi_launcher"
 local rofi_runner = scripts .. "/rofi_runner"
@@ -196,7 +212,7 @@ local rofi_bluetooth = scripts .. "/rofi_bluetooth"
 local rofi_powermenu = scripts .. "/rofi_powermenu"
 local rofi_screenshot = scripts .. "/rofi_screenshot"
 
-local notifycmd = "notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low"
+-- local notifycmd = "notify-send -h string:x-canonical-private-synchronous:hypr-cfg -u low"
 
 --------------------------------------------------------------------------------
 -- Keybindings
