@@ -59,8 +59,8 @@ hl.config({
 		inactive_opacity = 0.73,
 
 		blur = {
-			size = 8,
-			passes = 2,
+			size = 16,
+			passes = 3,
 			brightness = 0.8172,
 			popups = true,
 			ignore_opacity = true,
@@ -155,11 +155,11 @@ hl.config({
 --------------------------------------------------------------------------------
 
 -- Keep these windows fully opaque (active and inactive).
-hl.window_rule({
-	name = "opaque-browsers",
-	match = { class = "brave-browser|google-chrome" },
-	opacity = "1.0 override 1.0 override",
-})
+-- hl.window_rule({
+-- 	name = "opaque-browsers",
+-- 	match = { class = "brave-browser|google-chrome" },
+-- 	opacity = "1.0 override 1.0 override",
+-- })
 hl.window_rule({
 	name = "davinci-resolve",
 	match = { class = "davinci-resolve" },
@@ -183,11 +183,6 @@ hl.window_rule({
 	-- suppress_event = "fullscreen",
 	opacity = "1.0 override 1.0 override",
 })
-hl.window_rule({
-	name = "opaque-ghostty",
-	match = { class = "com.mitchellh.ghostty" },
-	opacity = "1.0 override 1.0 override",
-})
 
 --------------------------------------------------------------------------------
 -- Programs
@@ -195,7 +190,8 @@ hl.window_rule({
 
 local scripts = "~/.config/hypr/scripts"
 
-local ghostty = "/usr/bin/ghostty"
+-- local ghostty = "/usr/bin/ghostty"
+local ghostty = "~/.local/bin/ghostty"
 local files = "thunar"
 local editor = "geany"
 local browser = "firefox"
@@ -217,6 +213,9 @@ local rofi_screenshot = scripts .. "/rofi_screenshot"
 --------------------------------------------------------------------------------
 -- Keybindings
 --------------------------------------------------------------------------------
+
+-- Unbind
+hl.bind("CTRL + Return", function() end)
 
 -- Terminal & apps
 hl.bind("SUPER + Return", hl.dsp.exec_cmd(ghostty))
