@@ -62,9 +62,10 @@ hl.config({
 			size = 16,
 			passes = 3,
 			brightness = 0.8172,
-			popups = true,
+			-- popups = true,
 			ignore_opacity = true,
-			xray = false,
+			xray = true,
+			new_optimizations = true,
 		},
 
 		shadow = {
