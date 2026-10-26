@@ -7,7 +7,12 @@ return {
 	-- Elements
 	border_size = 1, -- theme knob; note general.border_size is overridden to 0 below
 	gaps_in = 5,
-	gaps_out = 10,
+	gaps_out = {
+		top = 0,
+		right = 10,
+		bottom = 10,
+		left = 10,
+	},
 	gaps_ws = -20,
 	rounding = 8,
 
